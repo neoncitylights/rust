@@ -38,7 +38,6 @@ Open your favorite terminal and clone this locally.
 | Cargo package            | [`Cargo.toml`](./Cargo.toml)                            | [Reference](https://doc.rust-lang.org/cargo/reference/manifest.html)                                             |
 | Clippy (Rust linter)     | [`.clippy.toml`](./.clippy.toml)                         | [Repository](https://github.com/rust-lang/rust-clippy), [Reference]( https://rust-lang.github.io/rust-clippy/) |
 | Rustfmt (Rust formatter) | [`.rustfmt.toml`](./.rustfmt.toml)                       | [Repository](https://github.com/rust-lang/rustfmt), [Reference](https://rust-lang.github.io/rustfmt/)           |
-| Commitlint               | [`.commitlintrc.json`](./.commitlintrc.json)            | [Repository](https://github.com/conventional-changelog/commitlint), [Reference](https://commitlint.js.org/#/)    |
 | `cargo-deny`             | [`deny.toml`](./deny.toml)                               | [Repository](https://github.com/EmbarkStudios/cargo-deny)                                                        |
 
 ## Run scripts locally
