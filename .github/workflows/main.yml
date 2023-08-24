@@ -27,23 +27,37 @@ on:
 
 jobs:
   build:
-    name: build
+    name: build (${{ matrix.label }})
     runs-on: ubuntu-latest
     strategy:
+      # Documentation:
+      #  - https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
+      #  - https://rust-lang.github.io/rustup/concepts/channels.html
+      #  - https://rust-lang.github.io/rustup/concepts/toolchains.html
       matrix:
-        toolchain:
-          - stable
-          - beta
-          - nightly
+        include:
+          - label: msrv
+            toolchain: '1.70'
+          - label: stable
+            toolchain: stable
+          - label: beta
+            toolchain: beta
+          - label: nightly
+            toolchain: nightly
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-    - name: Install Rust
+    - name: Install Rust (${{ matrix.toolchain }})
       run: |
         rustup set profile minimal
         rustup toolchain install ${{ matrix.toolchain }}
         rustup override set ${{ matrix.toolchain }}
+    - name: Print environment info
+      run: |
+        rustc --version --verbose
+        cargo --version
+        rustup --version
     - name: Cache dependencies
       uses: Swatinem/rust-cache@v2
       with:
@@ -65,6 +79,11 @@ jobs:
         rustup toolchain install stable
         rustup override set stable
         rustup component add llvm-tools-preview
+    - name: Print environment info
+      run: |
+        rustc --version --verbose
+        cargo --version
+        rustup --version
     - name: Cache dependencies
       uses: Swatinem/rust-cache@v2
       with:
@@ -93,6 +112,11 @@ jobs:
         rustup set profile minimal
         rustup toolchain install stable
         rustup override set stable
+    - name: Print environment info
+      run: |
+        rustc --version --verbose
+        cargo --version
+        rustup --version
     - name: Install Valgrind
       run: sudo apt install -y valgrind
     - name: Run benchmarks
@@ -112,6 +136,12 @@ jobs:
           rustup toolchain install stable
           rustup override set stable
           rustup component add rustfmt
+      - name: Print environment info
+        run: |
+          rustc --version --verbose
+          cargo --version
+          cargo fmt --version
+          rustup --version
       - name: Cache dependencies
         uses: Swatinem/rust-cache@v2
         with:
@@ -133,6 +163,12 @@ jobs:
           rustup toolchain install stable
           rustup override set stable
           rustup component add clippy
+      - name: Print environment info
+        run: |
+          rustc --version --verbose
+          cargo --version
+          cargo clippy --version
+          rustup --version
       - name: Cache dependencies
         uses: Swatinem/rust-cache@v2
         with:

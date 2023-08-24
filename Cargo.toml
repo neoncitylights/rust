@@ -9,6 +9,7 @@ description = "Your description of the Rust library"
 readme = "README.md"
 license = "MIT OR Apache-2.0"
 edition = "2021"
+rust-version = "1.70.0"
 # keywords = []
 # categories = []
 exclude = [
