@@ -74,6 +74,13 @@ jobs:
         rustup toolchain install stable
         rustup override set stable
         rustup component add llvm-tools-preview
+    - name: Print environment info
+      run: |
+        rustc --version --verbose
+        cargo --version
+        cargo clippy --version
+        cargo fmt --version
+        rustup --version
     - name: Cache dependencies
       uses: Swatinem/rust-cache@v2
       with:
