@@ -27,14 +27,23 @@ on:
 
 jobs:
   build:
-    name: build
+    name: build (${{ matrix.label }})
     runs-on: ubuntu-latest
     strategy:
+      # Documentation:
+      #  - https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
+      #  - https://rust-lang.github.io/rustup/concepts/channels.html
+      #  - https://rust-lang.github.io/rustup/concepts/toolchains.html
       matrix:
-        toolchain:
-          - stable
-          - beta
-          - nightly
+        include:
+          - label: msrv
+            toolchain: '1.70'
+          - label: stable
+            toolchain: stable
+          - label: beta
+            toolchain: beta
+          - label: nightly
+            toolchain: nightly
 
     steps:
     - name: Checkout repository
