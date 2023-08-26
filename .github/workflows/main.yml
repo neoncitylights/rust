@@ -173,7 +173,7 @@ jobs:
         uses: Swatinem/rust-cache@v2
         with:
           shared-key: full-build-cache
-      - name: clippy
+      - name: Check for Clippy linting errors
         run: cargo clippy --all-features
 
   ci-success:
