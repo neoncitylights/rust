@@ -7,16 +7,16 @@
 		{
 			"type": "lldb",
 			"request": "launch",
-			"name": "Debug unit tests in library 'strain'",
+			"name": "Debug unit tests in library '{{library}}'",
 			"cargo": {
 				"args": [
 					"test",
 					"--no-run",
 					"--lib",
-					"--package=strain"
+					"--package={{library}}"
 				],
 				"filter": {
-					"name": "strain",
+					"name": "{{library}}",
 					"kind": "lib"
 				}
 			},
@@ -26,15 +26,15 @@
 		{
 			"type": "lldb",
 			"request": "launch",
-			"name": "Debug executable 'strain'",
+			"name": "Debug executable '{{library}}'",
 			"cargo": {
 				"args": [
 					"build",
-					"--bin=strain",
-					"--package=strain"
+					"--bin={{library}}",
+					"--package={{library}}"
 				],
 				"filter": {
-					"name": "strain",
+					"name": "{{library}}",
 					"kind": "bin"
 				}
 			},
@@ -44,16 +44,16 @@
 		{
 			"type": "lldb",
 			"request": "launch",
-			"name": "Debug unit tests in executable 'strain'",
+			"name": "Debug unit tests in executable '{{library}}'",
 			"cargo": {
 				"args": [
 					"test",
 					"--no-run",
-					"--bin=strain",
-					"--package=strain"
+					"--bin={{library}}",
+					"--package={{library}}"
 				],
 				"filter": {
-					"name": "strain",
+					"name": "{{library}}",
 					"kind": "bin"
 				}
 			},
