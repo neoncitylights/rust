@@ -99,6 +99,35 @@ jobs:
         verbose: true
         files: lcov.info
 
+  miri:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Install Rust (nightly)
+      run: |
+        rustup set profile minimal
+        rustup toolchain install nightly
+        rustup override set nightly
+    - name: Print environment info
+      run: |
+        rustc --version --verbose
+        cargo --version
+        rustup --version
+    - name: Cache dependencies
+      uses: Swatinem/rust-cache@v2
+      with:
+        shared-key: full-build-cache
+    - name: Install Miri
+      run: |
+        rustup toolchain install nightly --component miri
+        rustup override set nightly
+        cargo miri setup
+    - name: Run tests with Miri
+      run: cargo miri test
+
   bench:
     name: bench
     runs-on: ubuntu-latest
@@ -122,8 +151,7 @@ jobs:
     - name: Run benchmarks
       run: cargo bench --no-fail-fast
 
-  fmt:
-    name: rustfmt-check
+  rustfmt-check:
     runs-on: ubuntu-latest
     needs: build
 
@@ -149,8 +177,7 @@ jobs:
       - name: Check formatting/code style
         run: cargo fmt --all -- --check
 
-  clippy:
-    name: clippy-check
+  clippy-check:
     runs-on: ubuntu-latest
     needs: build
 
@@ -182,9 +209,10 @@ jobs:
     needs:
       - build
       - test
+      - miri
       - bench
-      - clippy
-      - fmt
+      - clippy-check
+      - rustfmt-check
     runs-on: ubuntu-latest
     steps:
       - name: ✅ CI succeeded
