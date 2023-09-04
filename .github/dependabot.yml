@@ -16,6 +16,17 @@ updates:
       - "pkg-cargo"
     open-pull-requests-limit: 4
 
+  - package-ecosystem: "cargo"
+    directory: "/fuzz"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore(deps/cargo):"
+    labels:
+      - "t-dependencies"
+      - "pkg-cargo"
+    open-pull-requests-limit: 4
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
