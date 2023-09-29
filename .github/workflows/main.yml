@@ -158,9 +158,11 @@ jobs:
       matrix:
         include:
           - tool: clippy
-            cmd: cargo fmt --all -- --check
+            cmd-cargo: clippy
+            cmd-check: cargo fmt --all -- --check
           - tool: rustfmt
-            cmd: cargo clippy --all-features
+            cmd-cargo: fmt
+            cmd-check: cargo clippy --all-features
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -174,14 +176,14 @@ jobs:
         run: |
           rustc --version --verbose
           cargo --version
-          cargo ${{ matrix.tool }} --version
+          cargo ${{ matrix.cmd-cargo }} --version
           rustup --version
       - name: Cache dependencies
         uses: Swatinem/rust-cache@v2
         with:
           shared-key: full-build-cache
       - name: Run code quality assurance check (${{ matrix.tool }})
-        run: ${{ matrix.cmd }}
+        run: ${{ matrix.cmd-check }}
 
   ci-success:
     name: ci-success
