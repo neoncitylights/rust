@@ -9,7 +9,7 @@ Open your favorite terminal and clone this locally.
 - With the [GitHub CLI](https://cli.github.com/): Use the command below. Replace `<project>` with what you'd like to call your project.
 
    ```shell
-   gh repo create <project> --template neoncitylights/rust-template
+   gh repo create <project> --template neoncitylights/rust
    ```
 
 - With the GitHub UI: You can create a new repository based on this template by clicking the "Use this template" button in the top-right corner of this page.
