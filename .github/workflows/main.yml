@@ -111,6 +111,7 @@ jobs:
         rustup set profile minimal
         rustup toolchain install nightly
         rustup override set nightly
+        rustup component add miri
     - name: Print environment info
       run: |
         rustc --version --verbose
