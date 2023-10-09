@@ -116,6 +116,7 @@ jobs:
         rustc --version --verbose
         cargo --version
         rustup --version
+        cargo miri --version
     - name: Cache dependencies
       uses: Swatinem/rust-cache@v2
       with:
