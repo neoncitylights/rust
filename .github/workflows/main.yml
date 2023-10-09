@@ -171,7 +171,7 @@ jobs:
         with:
           shared-key: full-build-cache
       - name: Build
-        run: cargo doc
+        run: cargo doc --no-deps
 
   codequality-check:
     name: codequality-check (${{ matrix.tool }})
