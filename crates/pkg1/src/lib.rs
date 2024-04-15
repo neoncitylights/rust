@@ -1,15 +1,15 @@
 //! This is a top-level file comment (`//!`). In `lib.rs` specifically,
 //! it shows up as the root-level crate documentation.
-//! 
+//!
 //! For documentation about the different types of Doc comments in Rust,
 //! see <https://cheats.rs/#documentation>
 
 /// This is an outer-line doc comment (triple slash, `///`).
 /// This documentation gets attached to the symbol in Rustdoc,
 /// and shows up in generated documentation.
-/// 
+///
 /// Say hi to someone!
-/// 
+///
 /// # Examples
 /// This code block gets ran by Rustdoc and is considered a "doctest".
 /// ```
