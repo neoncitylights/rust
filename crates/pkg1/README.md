@@ -1,9 +1,9 @@
 # {{library}}
 
-[![License](https://img.shields.io/badge/License-MIT%20%26%20Apache%202.0-blue)](#license)
-[![CI](https://github.com/neoncitylights/rust/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/rust/actions/workflows/main.yml)
-[![Security audit](https://github.com/neoncitylights/rust/actions/workflows/security-audit.yml/badge.svg)](https://github.com/neoncitylights/rust/actions/workflows/security-audit.yml)
-[![codecov](https://codecov.io/gh/neoncitylights/rust/branch/main/graph/badge.svg?token=6ZSIWAQTHU)](https://codecov.io/gh/neoncitylights/rust)
+[![License](https://img.shields.io/badge/License-MIT%20%26%20Apache%202.0-blue?style=flat-square)](#license)
+[![CI](https://img.shields.io/github/deployments/neoncitylights/rust/github-pages?label=deploy&style=flat-square)](https://github.com/neoncitylights/rust/actions/workflows/main.yml)
+[![Security audit](https://img.shields.io/github/actions/workflow/status/neoncitylights/rust/.github/workflows/main.yml?style=flat-square)](https://github.com/neoncitylights/rust/actions/workflows/security-audit.yml)
+[![Codecov](https://img.shields.io/codecov/c/github/neoncitylights/rust?style=flat-square&logo=codecov&logoColor=%23fff)](https://codecov.io/gh/neoncitylights/rust)
 
 {{desc}}
 
