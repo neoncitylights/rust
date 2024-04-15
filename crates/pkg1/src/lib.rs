@@ -13,6 +13,8 @@
 /// # Examples
 /// This code block gets ran by Rustdoc and is considered a "doctest".
 /// ```
+/// use rust_template::greet;
+///
 /// assert_eq!(greet("Bob"), String::from("Hello Bob!"));
 /// ```
 pub fn greet(name: &str) -> String {
