@@ -11,12 +11,22 @@ on:
 permissions:
   contents: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Allow only one concurrent deployment, skipping runs queued between
+# the run in-progress and latest queued. However, do NOT cancel in-progress
+# runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
+# GitHub Pages requires a root `index.html` to function properly.
+# This job does a few things to make sure this works:
+# - Runs the Nightly channel of Rust
+# - Passes the `--enable-index-page` flag to Rustdoc; since this
+#   is an unstable feature, this requires Nightly Rust and also
+#   passing the `-Zunstable-options` flag
+#
+# See:
+# - https://doc.rust-lang.org/rustdoc/unstable-features.html#--enable-index-page-generate-a-default-index-page-for-docs
 jobs:
   rustdoc-build:
     runs-on: ubuntu-latest

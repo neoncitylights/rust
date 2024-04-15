@@ -1,5 +1,3 @@
-#![doc = include_str!("../README.md")]
-
 /// Say hi to someone! <3
 pub fn greet(name: &str) -> String {
 	format!("Hello {}!", name)

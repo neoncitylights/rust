@@ -36,15 +36,15 @@
 
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				// quality-of-life
-				"mutantdino.resourcemonitor",
-
-				// Rust + debugging
+				// rust
+				"belfz.search-crates-io",
+				"hbenl.vscode-test-explorer",
 				"rust-lang.rust-analyzer",
 				"serayuzgur.crates",
+				"Swellaby.vscode-rust-test-adapter",
 				"tamasfe.even-better-toml",
 
-				// Markdown
+				// markdown
 				"mathiassoeholm.markdown-link-updater",
 				"yzhang.markdown-all-in-one"
 			]
