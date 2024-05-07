@@ -72,11 +72,13 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-    - name: Install Rust
+    # `--doctests` flag for `cargo llvm-cov` requires nightly channel
+    # see: https://github.com/taiki-e/cargo-llvm-cov/issues/2
+    - name: Install Rust (Nightly)
       run: |
         rustup set profile minimal
-        rustup toolchain install stable
-        rustup override set stable
+        rustup toolchain install nightly
+        rustup override set nightly
         rustup component add llvm-tools-preview
     - name: Print environment info
       run: |
