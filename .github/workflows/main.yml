@@ -63,7 +63,7 @@ jobs:
       with:
         shared-key: full-build-cache
     - name: Build
-      run: cargo build --verbose
+      run: cargo build --verbose --all-features
 
   test:
     name: test
