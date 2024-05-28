@@ -45,12 +45,10 @@ Replace the following placeholders with your editor's find-and-replace:
 | Script      | Command |
 |-------------|---------|
 | Run unit/integration/doc tests | `cargo test` |
-| Run fuzz tests | `cargo fuzz <fuzz-target>` |
 | Run Rustfmt | `cargo fmt` |
 | Run Clippy | `cargo clippy` |
-| Run performance benchmarks | `cargo bench` |
 | Generate API docs for crate | `cargo doc` |
-| Generate mdBook docs for crate | `mdbook build` |
+| Generate mdBook docs for crate | `mdbook build` (in `crates/**/book`) |
 | Run security audits | `cargo audit`[^cargo-audit] |
 
 [^cargo-audit]: Requires installing [`cargo-audit`](https://crates.io/crates/cargo-audit) locally
