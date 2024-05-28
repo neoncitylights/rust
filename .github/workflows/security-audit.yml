@@ -4,12 +4,14 @@ on:
     paths:
       - '**/Cargo.toml'
       - '**/Cargo.lock'
+      - '**/deny.toml'
   push:
     branches:
       - main
     paths:
       - '**/Cargo.toml'
       - '**/Cargo.lock'
+      - '**/deny.toml'
   schedule:
     # Run once a week on Monday at 00:00 (12:00AM or Midnight, UTC)
     # See POSIX cron syntax visualized at https://crontab.guru/#0_0_*_*_1
