@@ -28,6 +28,7 @@ Replace the following placeholders with your editor's find-and-replace:
 - [x] Running unit/integration/doc tests
 - [x] Running [Rustfmt](https://github.com/rust-lang/rustfmt) and [Clippy](https://github.com/rust-lang/rust-clippy) for detecting formatting and linting errors, respectively
 - [x] Weekly, midnight scheduled audits of Rust packages (for outdated dependencies, compatible software licenses, and software vulnerabilities) with [`EmbarkStudios/cargo-deny-action`](https://github.com/EmbarkStudios/cargo-deny-action)
+- [x] Includes dual licenses under [MIT](./LICENSE-MIT)/[Apache-2.0](./LICENSE-APACHE) by default to ensure compatibility with the Rust ecosystem (see [`C-PERMISSIVE`](https://rust-lang.github.io/api-guidelines/necessities.html#crate-and-its-dependencies-have-a-permissive-license-c-permissive) section from Rust API Guidelines book)
 
 ## Configure
 
