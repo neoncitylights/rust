@@ -25,7 +25,7 @@ Replace the following placeholders with your editor's find-and-replace:
 
 - [x] Remote development support with [GitHub Codespaces](https://github.com/features/codespaces)
 - [x] CI/CD support with [GitHub Actions](https://github.com/features/actions)
-- [x] Running tests and benchmarks
+- [x] Running unit/integration/doc tests
 - [x] Running [Rustfmt](https://github.com/rust-lang/rustfmt) and [Clippy](https://github.com/rust-lang/rust-clippy) for detecting formatting and linting errors, respectively
 - [x] Weekly, midnight scheduled audits of Rust packages (for outdated dependencies, compatible software licenses, and software vulnerabilities) with [`EmbarkStudios/cargo-deny-action`](https://github.com/EmbarkStudios/cargo-deny-action)
 
