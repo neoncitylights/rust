@@ -2,6 +2,7 @@ name: Security audit
 on:
   pull_request:
     paths:
+      - '.github/workflows/security-audit.yml'
       - '**/Cargo.toml'
       - '**/Cargo.lock'
       - '**/deny.toml'
@@ -9,6 +10,7 @@ on:
     branches:
       - main
     paths:
+      - '.github/workflows/security-audit.yml'
       - '**/Cargo.toml'
       - '**/Cargo.lock'
       - '**/deny.toml'
