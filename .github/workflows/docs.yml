@@ -28,7 +28,7 @@ concurrency:
 # See:
 # - https://doc.rust-lang.org/rustdoc/unstable-features.html#--enable-index-page-generate-a-default-index-page-for-docs
 jobs:
-  rustdoc-build:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
