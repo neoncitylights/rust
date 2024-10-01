@@ -1,0 +1,1 @@
+searchState.loadedDescShard("my_crate", 0, "This is a top-level file comment (<code>//!</code>). In <code>lib.rs</code> …\nThis is an outer-line doc comment (triple slash, <code>///</code>). …")
