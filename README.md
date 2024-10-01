@@ -27,7 +27,7 @@ Replace the following placeholders with your editor's find-and-replace:
 - [x] CI/CD support with [GitHub Actions](https://github.com/features/actions)
 - [x] Running unit/integration/doc tests
 - [x] Running [Rustfmt](https://github.com/rust-lang/rustfmt) and [Clippy](https://github.com/rust-lang/rust-clippy) for detecting formatting and linting errors, respectively
-- [x] Weekly, midnight scheduled audits of Rust packages for software vulnerabilities with [`cargo-audit`](https://crates.io/crates/cargo-audit) via [rustsec/audit-check](https://github.com/rustsec/audit-check) GitHub Action (maintained by the Secure Code Working Group).
+- [x] Weekly, midnight scheduled audits of Rust packages for software vulnerabilities with [`cargo-audit`](https://crates.io/crates/cargo-audit) via the [`rustsec/audit-check`](https://github.com/rustsec/audit-check) GitHub Action (maintained by the Secure Code Working Group).
 - [x] Includes dual licenses under [MIT](./LICENSE-MIT)/[Apache-2.0](./LICENSE-APACHE) by default to ensure compatibility with the Rust ecosystem (see [`C-PERMISSIVE`](https://rust-lang.github.io/api-guidelines/necessities.html#crate-and-its-dependencies-have-a-permissive-license-c-permissive) section from Rust API Guidelines book)
 
 ## Configure
