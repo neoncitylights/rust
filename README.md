@@ -25,7 +25,7 @@ Replace the following placeholders with your editor's find-and-replace:
 
 - [x] Remote development support with [GitHub Codespaces](https://github.com/features/codespaces)
 - [x] CI/CD support with [GitHub Actions](https://github.com/features/actions)
-- [x] Deploys latest/nightly docs to GitHub Pages (without `gh-pages` branch) via [actions/deploy-pages](https://github.com/actions/deploy-pages) action
+- [x] Deploys latest/nightly docs to GitHub Pages (without `gh-pages` branch) via [`actions/deploy-pages`](https://github.com/actions/deploy-pages) action
 - [x] Running unit/integration/doc tests
 - [x] Running [Rustfmt](https://github.com/rust-lang/rustfmt) and [Clippy](https://github.com/rust-lang/rust-clippy) for detecting formatting and linting errors, respectively
 - [x] Weekly, midnight scheduled audits of Rust packages for software vulnerabilities with [`cargo-audit`](https://crates.io/crates/cargo-audit) via [`rustsec/audit-check`](https://github.com/rustsec/audit-check) action (maintained by the Secure Code Working Group).
