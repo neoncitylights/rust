@@ -9,7 +9,8 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: write
+  pages: write
+  id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between
 # the run in-progress and latest queued. However, do NOT cancel in-progress
@@ -43,12 +44,17 @@ jobs:
         run: cargo doc --workspace --no-deps --all-features
         env:
           RUSTDOCFLAGS: --enable-index-page -Zunstable-options
-      - name: Print out build files in /target/doc
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      # https://github.com/actions/deploy-pages/issues/188#issuecomment-1597651901
+      - name: Remove build files in /target/doc with incorrect permissions
+        run: rm -f ./target/doc/.lock
+      - name: Print build files in /target/doc
         run: find ./target/doc -exec echo {} \;
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './target/doc'
       - name: Deploy to GitHub Pages
         if: github.event_name != 'pull_request'
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./target/doc
-          force_orphan: true
+        uses: actions/deploy-pages@v4
