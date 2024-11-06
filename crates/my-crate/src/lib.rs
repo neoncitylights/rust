@@ -1,3 +1,5 @@
+#![cfg_attr(docsrs, feature(doc_cfg))]
+
 //! This is a top-level file comment (`//!`). In `lib.rs` specifically,
 //! it shows up as the root-level crate documentation.
 //!
