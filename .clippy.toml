@@ -9,3 +9,8 @@
 #  - Repository: https://github.com/rust-lang/rust-clippy
 #  - Documentation: https://rust-lang.github.io/rust-clippy/master/index.html
 #  - Allowing/denying lints: https://github.com/rust-lang/rust-clippy#allowingdenying-lints
+
+allow-dbg-in-tests = true
+allow-expect-in-tests = true
+allow-print-in-tests = true
+allow-unwrap-in-tests = true
