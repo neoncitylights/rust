@@ -34,7 +34,7 @@ jobs:
             echo "cargo_lock_exists=false" >> $GITHUB_ENV
           fi
       - name: Generate Cargo.lock if file does not exist
-        if: env.cargo_lock_exists == 'true'
+        if: env.cargo_lock_exists == 'false'
         run: cargo generate-lockfile
       - name: Run cargo-audit
         uses: rustsec/audit-check@v2.0.0
