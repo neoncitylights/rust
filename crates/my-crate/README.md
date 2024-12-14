@@ -10,8 +10,8 @@
 [ci-url]: https://github.com/neoncitylights/rust/actions/workflows/main.yml
 [security-badge]: https://img.shields.io/github/actions/workflow/status/neoncitylights/rust/.github/workflows/main.yml?style=flat-square
 [security-url]: https://github.com/neoncitylights/rust/actions/workflows/security-audit.yml
-[codecov]: https://img.shields.io/codecov/c/github/neoncitylights/rust?style=flat-square&logo=codecov&logoColor=%23fff
-[codecov-badge]: https://codecov.io/gh/neoncitylights/rust
+[codecov-badge]: https://img.shields.io/codecov/c/github/neoncitylights/rust?style=flat-square&logo=codecov&logoColor=%23fff
+[codecov-url]: https://codecov.io/gh/neoncitylights/rust
 
 {{desc}}
 
