@@ -2,7 +2,6 @@
 Repository template to get quickly started with writing Rust libraries, ready for distributing.
 
 ## Features
-- [x] Remote development support with [GitHub Codespaces](https://github.com/features/codespaces)
 - [x] CI/CD support with [GitHub Actions](https://github.com/features/actions)
 - [x] Deploys latest/nightly docs to GitHub Pages (without `gh-pages` branch) via [`actions/deploy-pages`](https://github.com/actions/deploy-pages) action
 - [x] Running unit/integration/doc tests
