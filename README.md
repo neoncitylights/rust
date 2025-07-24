@@ -1,13 +1,13 @@
-# Rust Repository Template 🦀
-Repository template to get quickly started with writing Rust libraries, ready for distributing.
+# Rust template
+A repository template to get started with writing Rust projects.
 
 ## Features
 - [x] CI/CD support with [GitHub Actions](https://github.com/features/actions)
-- [x] Deploys latest/nightly docs to GitHub Pages (without `gh-pages` branch) via [`actions/deploy-pages`](https://github.com/actions/deploy-pages) action
-- [x] Running unit/integration/doc tests
-- [x] Running [Rustfmt](https://github.com/rust-lang/rustfmt) and [Clippy](https://github.com/rust-lang/rust-clippy) for detecting formatting and linting errors, respectively
-- [x] Weekly, midnight scheduled audits of Rust packages for software vulnerabilities with [`cargo-audit`](https://crates.io/crates/cargo-audit), a tool maintained by the Secure Code Working Group.
-- [x] Includes dual licenses under [MIT](./LICENSE-MIT)/[Apache-2.0](./LICENSE-APACHE) by default to ensure compatibility with the Rust ecosystem (see [`C-PERMISSIVE`](https://rust-lang.github.io/api-guidelines/necessities.html#crate-and-its-dependencies-have-a-permissive-license-c-permissive) section from Rust API Guidelines book)
+  - [x] Deploy Rustdoc documentation to GitHub Pages
+  - [x] Unit/integration/doc tests
+  - [x] [Rustfmt](https://github.com/rust-lang/rustfmt) and [Clippy](https://github.com/rust-lang/rust-clippy) for formatting and linting
+  - [x] [cargo-audit](https://crates.io/crates/cargo-audit) for security auditing (by the Secure Code WG)
+- [x] Includes [MIT](./LICENSE-MIT) & [Apache-2.0](./LICENSE-APACHE) licenses for ecosystem compatibility (see [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/necessities.html#crate-and-its-dependencies-have-a-permissive-license-c-permissive) book)
 
 ## Getting started
 ### Creating a new repository
