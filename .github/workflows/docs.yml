@@ -27,7 +27,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: Install Rust
         run: |
           rustup set profile minimal
@@ -36,9 +37,9 @@ jobs:
       - name: Compile crates
         run: cargo build --verbose
       - name: Build documentation
-        run: cargo doc --workspace --no-deps --all-features
+        run: cargo doc --workspace --no-deps --all-features --verbose
         env:
-          RUSTDOCFLAGS: --enable-index-page -Zunstable-options --cfg docsrs
+          RUSTDOCFLAGS: -D warnings  --cfg docsrs -Zunstable-options --enable-index-page --show-coverage
       - name: Setup Pages
         uses: actions/configure-pages@v5
       # https://github.com/actions/deploy-pages/issues/188#issuecomment-1597651901
