@@ -44,7 +44,6 @@ Replace the following placeholders with your editor's find-and-replace:
 | Run Rustfmt | `cargo fmt` |
 | Run Clippy | `cargo clippy` |
 | Generate API docs for crate | `cargo doc` |
-| Generate mdBook docs for crate | `mdbook build` (in `crates/**/book`) |
 | Run security audits | `cargo audit`[^cargo-audit] |
 
 [^cargo-audit]: Requires installing [`cargo-audit`](https://crates.io/crates/cargo-audit) locally
