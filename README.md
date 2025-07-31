@@ -32,7 +32,7 @@ Replace the following placeholders with your editor's find-and-replace:
 | Tool                | File path                                  | Reference                                                                                                      |
 |---------------------|--------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | GitHub Actions CI   | [`.github/workflows`](./.github/workflows) | [Reference](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)             |
-| Cargo package       | [`Cargo.toml`](crates/pkg1/Cargo.toml)     | [Reference](https://doc.rust-lang.org/cargo/reference/manifest.html)                                           |
+| Cargo package       | [`Cargo.toml`](./Cargo.toml)     | [Reference](https://doc.rust-lang.org/cargo/reference/manifest.html)                                           |
 | Clippy (Linter)     | [`.clippy.toml`](./.clippy.toml)           | [Repository](https://github.com/rust-lang/rust-clippy), [Reference]( https://rust-lang.github.io/rust-clippy/) |
 | Rustfmt (Formatter) | [`.rustfmt.toml`](./.rustfmt.toml)         | [Repository](https://github.com/rust-lang/rustfmt), [Reference](https://rust-lang.github.io/rustfmt/)          |
 
@@ -42,5 +42,5 @@ Replace the following placeholders with your editor's find-and-replace:
 | Run tests | `cargo test` |
 | Run Rustfmt | `cargo fmt` |
 | Run Clippy | `cargo clippy` |
-| Generate API crate documentation | `cargo doc` |
+| Build crate documentation | `cargo doc` |
 | Run security audits | `cargo audit` (with [`cargo-audit`](https://crates.io/crates/cargo-audit)) |
