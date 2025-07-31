@@ -1,5 +1,5 @@
 [package]
-name = "my-crate"
+name = "my_crate"
 version = "0.1.0"
 description = "{{desc}}"
 include = ["src", "LICENSE*"]

@@ -26,7 +26,7 @@ Replace the following placeholders with your editor's find-and-replace:
 - `{{author}}` - The author's name of the library. For example, this could be a username, nickname, or real name.
 - `{{email}}` - The author's email address. This is optional and can be deleted.
 - `neoncitylights/rust` - Replace this with the name of your repository.
-- `my-crate`, `my_crate` - Replace this with the name of your crate.
+- `my_crate` - Replace this with the name of your crate.
 
 ## Configure
 | Tool                | File path                                  | Reference                                                                                                      |
