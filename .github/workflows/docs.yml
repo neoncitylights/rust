@@ -39,7 +39,7 @@ jobs:
       - name: Build documentation
         run: cargo doc --workspace --no-deps --all-features
         env:
-          RUSTDOCFLAGS: -D warnings -Zunstable-options --enable-index-page --show-coverage --cfg docsrs
+          RUSTDOCFLAGS: -D warnings  --cfg docsrs -Zunstable-options --enable-index-page --show-coverage
       - name: Setup Pages
         uses: actions/configure-pages@v5
       # https://github.com/actions/deploy-pages/issues/188#issuecomment-1597651901
