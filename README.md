@@ -39,10 +39,8 @@ Replace the following placeholders with your editor's find-and-replace:
 ## Run scripts locally
 | Script      | Command |
 |-------------|---------|
-| Run unit/integration/doc tests | `cargo test` |
+| Run tests | `cargo test` |
 | Run Rustfmt | `cargo fmt` |
 | Run Clippy | `cargo clippy` |
-| Generate API docs for crate | `cargo doc` |
-| Run security audits | `cargo audit`[^cargo-audit] |
-
-[^cargo-audit]: Requires installing [`cargo-audit`](https://crates.io/crates/cargo-audit) locally
+| Generate API crate documentation | `cargo doc` |
+| Run security audits | `cargo audit` (with [`cargo-audit`](https://crates.io/crates/cargo-audit)) |
