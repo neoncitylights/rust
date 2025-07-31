@@ -37,7 +37,7 @@ jobs:
       - name: Compile crates
         run: cargo build --verbose
       - name: Build documentation
-        run: cargo doc --workspace --no-deps --all-features
+        run: cargo doc --workspace --no-deps --all-features --verbose
         env:
           RUSTDOCFLAGS: -D warnings  --cfg docsrs -Zunstable-options --enable-index-page --show-coverage
       - name: Setup Pages
