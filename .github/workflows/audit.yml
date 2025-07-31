@@ -35,7 +35,7 @@ jobs:
           fi
       - name: Generate Cargo.lock if file does not exist
         if: env.cargo_lock_exists == 'false'
-        run: cargo generate-lockfile
+        run: cargo generate-lockfile --verbose
       - name: Install cargo-audit
         uses: taiki-e/install-action@cargo-audit
       - name: Run cargo-audit
