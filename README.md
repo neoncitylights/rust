@@ -29,13 +29,12 @@ Replace the following placeholders with your editor's find-and-replace:
 - `my-crate`, `my_crate` - Replace this with the name of your crate.
 
 ## Configure
-| Tool                     | File path                                                | Reference                                                                                                        |
-|--------------------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| GitHub Codespaces        | [`devcontainer.json`](./.devcontainer/devcontainer.json) | [Reference](https://containers.dev/implementors/json_reference/)                                                 |
-| GitHub Actions           | [`.github/workflows`](./.github/workflows)               | [Reference](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)               |
-| Cargo package            | [`Cargo.toml`](crates/pkg1/Cargo.toml)                            | [Reference](https://doc.rust-lang.org/cargo/reference/manifest.html)                                             |
-| Clippy (Rust linter)     | [`.clippy.toml`](./.clippy.toml)                         | [Repository](https://github.com/rust-lang/rust-clippy), [Reference]( https://rust-lang.github.io/rust-clippy/) |
-| Rustfmt (Rust formatter) | [`.rustfmt.toml`](./.rustfmt.toml)                       | [Repository](https://github.com/rust-lang/rustfmt), [Reference](https://rust-lang.github.io/rustfmt/)           |
+| Tool                | File path                                  | Reference                                                                                                      |
+|---------------------|--------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| GitHub Actions      | [`.github/workflows`](./.github/workflows) | [Reference](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)             |
+| Cargo package       | [`Cargo.toml`](crates/pkg1/Cargo.toml)     | [Reference](https://doc.rust-lang.org/cargo/reference/manifest.html)                                           |
+| Clippy (Linter)     | [`.clippy.toml`](./.clippy.toml)           | [Repository](https://github.com/rust-lang/rust-clippy), [Reference]( https://rust-lang.github.io/rust-clippy/) |
+| Rustfmt (Formatter) | [`.rustfmt.toml`](./.rustfmt.toml)         | [Repository](https://github.com/rust-lang/rustfmt), [Reference](https://rust-lang.github.io/rustfmt/)          |
 
 ## Run scripts locally
 | Script      | Command |
