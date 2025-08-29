@@ -19,4 +19,12 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: "deps(gha):"
+    groups:
+      actions:
+        patterns:
+          - "actions/*"
+      rust:
+        patterns:
+          - "Swatinem/*"
+          - "taiki-e/*"
     open-pull-requests-limit: 4
