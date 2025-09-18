@@ -173,12 +173,8 @@ jobs:
         run: ${{ matrix.cmd-check }}
 
   publish-dry-run:
-    name: publish-dry-run (${{ matrix.crate }})
+    name: publish-dry-run
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        include:
-          - crate: my_crate
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
@@ -198,4 +194,4 @@ jobs:
           shared-key: full-build-cache
       - name: Run dry-run checks
         run: |
-          cargo publish --dry-run --verbose -p ${{ matrix.crate }}
+          cargo publish --dry-run --verbose --workspace
