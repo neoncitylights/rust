@@ -25,6 +25,7 @@ updates:
           - "actions/*"
       rust:
         patterns:
+          - "rust-lang/*"
           - "Swatinem/*"
           - "taiki-e/*"
     open-pull-requests-limit: 4
