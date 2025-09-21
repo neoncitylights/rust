@@ -16,6 +16,11 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v5
+    - name: Install Rust
+      run: |
+        rustup set profile minimal
+        rustup toolchain install stable
+        rustup override set stable
     - name: Print environment info
       run: |
         rustc --version --verbose
