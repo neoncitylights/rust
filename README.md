@@ -7,6 +7,7 @@ A repository template to get started with writing Rust projects.
   - [x] Run tests with LLVM code coverage
   - [x] [Rustfmt](https://github.com/rust-lang/rustfmt) and [Clippy](https://github.com/rust-lang/rust-clippy) for formatting and linting
   - [x] [cargo-audit](https://crates.io/crates/cargo-audit) for security auditing (by the Secure Code WG)
+  - [x] [Trusted Publishing](https://crates.io/docs/trusted-publishing) with OIDC (OpenID Connect)
 - [x] Includes [MIT](./LICENSE-MIT) & [Apache-2.0](./LICENSE-APACHE) licenses for ecosystem compatibility (see [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/necessities.html#crate-and-its-dependencies-have-a-permissive-license-c-permissive) book)
 
 ## Getting started

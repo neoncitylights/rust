@@ -1,0 +1,37 @@
+name: Publish to crates.io
+
+on:
+  push:
+    tags: ['v*']
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: publish
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v5
+    - name: Print environment info
+      run: |
+        rustc --version --verbose
+        cargo --version
+        rustup --version
+    - name: Authenticate to crates.io
+      if: ${{ github.event_name == 'push' }}
+      uses: rust-lang/crates-io-auth-action@v1
+      id: auth
+    - name: Publish
+      run: |
+        if [ "${{ github.event_name }}" = "pull_request" ]; then
+          echo "Dry-run publishing (PR)..."
+          cargo publish --verbose --workspace --dry-run
+        else
+          echo "Trusted publishing via OIDC (push)..."
+          cargo publish --verbose --workspace
+      env:
+        CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token }}
