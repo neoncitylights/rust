@@ -15,9 +15,9 @@ A repository template to get started with writing Rust projects.
 Choose a method:
 - **GitHub UI**: Press the "Use this template" button in the top-right corner of this page.
 - **GitHub CLI**: Install [GitHub CLI](https://cli.github.com). Then run one of the following:
-  ```shell
-  gh repo create --template neoncitylights/php --public --clone {{repository}}  # clone as public
-  gh repo create --template neoncitylights/php --private --clone {{repository}} # clone as private
+  ```sh
+  gh repo create --template neoncitylights/rust --public --clone {{repository}}  # clone as public
+  gh repo create --template neoncitylights/rust --private --clone {{repository}} # clone as private
   ```
 
 ### Replace placeholders
@@ -30,16 +30,16 @@ Replace the following placeholders with your editor's find-and-replace:
 - `my_crate` - Replace this with the name of your crate.
 
 ## Configure
-| Tool                | File path                                  | Reference                                                                                                      |
-|---------------------|--------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| GitHub Actions CI   | [`.github/workflows`](./.github/workflows) | [Reference](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)             |
-| Cargo package       | [`Cargo.toml`](./Cargo.toml)     | [Reference](https://doc.rust-lang.org/cargo/reference/manifest.html)                                           |
-| Clippy (Linter)     | [`.clippy.toml`](./.clippy.toml)           | [Repository](https://github.com/rust-lang/rust-clippy), [Reference]( https://rust-lang.github.io/rust-clippy/) |
-| Rustfmt (Formatter) | [`.rustfmt.toml`](./.rustfmt.toml)         | [Repository](https://github.com/rust-lang/rustfmt), [Reference](https://rust-lang.github.io/rustfmt/)          |
+| Tool | File path | Reference |
+| ---- | --------- | --------- |
+| GitHub Actions CI | [`.github/workflows`](./.github/workflows) | [Reference](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) |
+| Cargo package | [`Cargo.toml`](./Cargo.toml) | [Reference](https://doc.rust-lang.org/cargo/reference/manifest.html) |
+| Clippy (Linter) | [`.clippy.toml`](./.clippy.toml) | [Repository](https://github.com/rust-lang/rust-clippy), [Reference]( https://rust-lang.github.io/rust-clippy/) |
+| Rustfmt (Formatter) | [`.rustfmt.toml`](./.rustfmt.toml) | [Repository](https://github.com/rust-lang/rustfmt), [Reference](https://rust-lang.github.io/rustfmt/) |
 
 ## Run scripts locally
-| Script      | Command |
-|-------------|---------|
+| Script | Command |
+| ------ | ------- |
 | Run tests | `cargo test` |
 | Run Rustfmt | `cargo fmt` |
 | Run Clippy | `cargo clippy` |
